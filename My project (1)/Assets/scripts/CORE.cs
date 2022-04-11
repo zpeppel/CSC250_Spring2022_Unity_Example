@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ public class CORE : MonoBehaviour
 {
     public Transform enemyPrefab;
     public Transform spawnPoint;
+    //private Rigidbody rb;
+    public float speed = 20f;
 
     private static List<GameObject> theRooms = new List<GameObject>();
 
@@ -17,21 +20,38 @@ public class CORE : MonoBehaviour
 
     public static void display()
     {
-        print("Woot");
+        print("Player and enemy colided");
     }
-
-    // Start is called before the first frame update
-    void Start()
+    void OnCollisionEnter(Collision collision)
     {
-        for (int i = 0; i < 10; i++)
-        {
-            print(Random.Range(1, 10));
-        }
-        Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    
+
+    
+
+        // Start is called before the first frame update
+        void Start()
+        {
+        for (int i = 0; i < 20; i++)
+        {
+            Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+            //StartCoroutine(waiter());
+            
+        }
+
+
+    }
+    IEnumerator waiter()
+{
+    //Wait for 5 seconds
+    yield return new WaitForSeconds(5);
+
+    
+}
+// Update is called once per frame
+void Update()
     {
         
     }

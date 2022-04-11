@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465934, g: 0.49642956, b: 0.5748249, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1039,6 +1039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7866332784817202234, guid: d3ea29bba1ef74bf8aa7a836f1c2643e, type: 3}
   spawnPoint: {fileID: 1575302740}
+  speed: 20
 --- !u!4 &721685201
 Transform:
   m_ObjectHideFlags: 0
@@ -1374,9 +1375,10 @@ GameObject:
   - component: {fileID: 1086492188}
   - component: {fileID: 1086492187}
   - component: {fileID: 1086492186}
+  - component: {fileID: 1086492190}
   m_Layer: 0
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1458,6 +1460,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1086492190
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086492185}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10000, y: 2.220446e-16, z: 10000}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1101646223
 PrefabInstance:
   m_ObjectHideFlags: 0
